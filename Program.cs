@@ -291,12 +291,9 @@ do
             {
                 // Skip pets with default ID 
                 if (ourAnimals[i, 0] != "ID #: " && ourAnimals[i, 0] != null)
-                {
-                    // Enumerate pets and display ID value
-                    Console.WriteLine($"Pet {i + 1}, {ourAnimals[i, 0]}");
-                    
+                {                    
                     // Checks if Age has any value different from default. If not, asks user for an entry
-                    if (string.Equals(ourAnimals[i, 2], "Age: ", StringComparison.Ordinal))
+                    if (string.Equals(ourAnimals[i, 2], "Age: ", StringComparison.Ordinal) || string.Equals(ourAnimals[i, 2], "Age: ?", StringComparison.Ordinal))
                     {
                         while (true)
                         {
